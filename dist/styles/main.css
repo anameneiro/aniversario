@@ -1,0 +1,70 @@
+.container {
+  background-image: url("../annie-spratt-M20ylqCzSZw-unsplash.4c324179.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 8%;
+  position: relative;
+}
+
+.container:before {
+  content: "";
+  opacity: .7;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container__conteudo {
+  color: #fff;
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container__conteudo h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.container__conteudo__time {
+  display: flex;
+}
+
+.container__conteudo__time--contagem {
+  flex-basis: 80px;
+}
+
+.container__conteudo__time--contagem p {
+  margin-bottom: -9px;
+  font-size: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #0000;
+  border: 2px solid #fff;
+  outline: none;
+  margin-top: 25px;
+  padding: 12px 25px;
+}
+
+button:hover {
+  color: #000;
+  background-color: #d1c3c3;
+}
+
+/*# sourceMappingURL=main.css.map */
