@@ -1,3 +1,4 @@
+AOS.init();
 const countDowDate = new Date("Aug 10, 2024 14:00:00").getTime();
 const x = setInterval(function() {
     const agora = new Date().getTime();

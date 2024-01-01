@@ -1,4 +1,4 @@
-.container {
+.hero {
   background-image: url("../annie-spratt-M20ylqCzSZw-unsplash.4c324179.jpg");
   background-position: center;
   background-size: cover;
@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.container:before {
+.hero:before {
   content: "";
   opacity: .7;
   background-color: #000;
@@ -19,7 +19,7 @@
   left: 0;
 }
 
-.container__conteudo {
+.hero__conteudo {
   color: #fff;
   align-content: center;
   position: absolute;
@@ -27,44 +27,189 @@
   transform: translateY(-50%);
 }
 
-.container__conteudo h1 {
-  font-size: 64px;
+.hero__conteudo h1 {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #00a8fd, #fff 35%, #e00a95) 0 0 / 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 54px;
   font-weight: bold;
+  animation: 5s linear infinite gradient;
 }
 
-.container__conteudo__time {
+@keyframes gradient {
+  0% {
+    background-position: 0 75%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0 70%;
+  }
+}
+
+.hero__conteudo__time {
   display: flex;
 }
 
-.container__conteudo__time--contagem {
-  flex-basis: 80px;
+.hero__conteudo__time--contagem {
+  flex-basis: 100px;
 }
 
-.container__conteudo__time--contagem p {
+.hero__conteudo__time--contagem p {
   margin-bottom: -9px;
-  font-size: 30px;
+  font-size: 35px;
+}
+
+.hero__conteudo__time--contagem span {
+  font-size: 20px;
+}
+
+@media (width <= 780px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+}
+
+.container {
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100vw;
+  max-width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+}
+
+.container__imagem img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 34px;
+}
+
+.container__conteudo {
+  text-align: justify;
+}
+
+.container__presenca {
+  text-align: center;
+  background-color: #f4abdb;
+  border-radius: 0 67px 0 78px;
+  padding: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.container__presenca li {
+  display: inline;
+}
+
+.container__presenca li a {
+  color: #fff;
+  margin: 3px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.container__presenca li a i:hover {
+  color: #b0e4fe;
+}
+
+.container__form {
+  padding: 15px;
+}
+
+.container__form input {
+  font: inherit;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 12px;
+  display: block;
+}
+
+.container__form input[type="submit"] {
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #f4abdb;
+  border: none;
+  margin: 4px 2px;
+  padding: 16px 32px;
+  text-decoration: none;
+}
+
+.container__form input[type="submit"]:hover {
+  background-color: #b0e4fe;
+}
+
+@media (width <= 780px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 80%;
+    display: grid;
+  }
+
+  .container img {
+    max-width: 100%;
+    margin-top: 24px;
+  }
 }
 
 * {
   box-sizing: border-box;
+  color: #fff;
   margin: 0;
   padding: 0;
   font-family: Montserrat, sans-serif;
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(#000 80%, #1e1f1f);
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #f4abdb;
+  padding-bottom: 14px;
+}
+
+header {
+  overflow: hidden;
 }
 
 button {
-  color: #fff;
+  color: #000;
+  text-transform: uppercase;
   cursor: pointer;
-  background-color: #0000;
-  border: 2px solid #fff;
-  outline: none;
-  margin-top: 25px;
-  padding: 12px 25px;
+  background-color: #f4abdb;
+  border: none;
+  border-radius: 5px;
+  margin-top: 24px;
+  padding: 16px 32px;
+  text-decoration: none;
 }
 
 button:hover {
-  color: #000;
-  background-color: #d1c3c3;
+  background-color: #b0e4fe;
 }
 
 /*# sourceMappingURL=main.css.map */

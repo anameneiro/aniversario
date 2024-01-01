@@ -1,0 +1,97 @@
+@use 'variaveis';
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    max-width:1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    
+    &__imagem{
+        img{
+            margin-top: 34px;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &__conteudo{
+        text-align: justify;
+    }
+
+    &__presenca{
+        text-align: center;
+        padding: 24px;
+        line-height: 24px;
+        font-weight: bold;
+        background-color: variaveis.$corDoBotao;
+        border-radius: 0px 67px 0px 78px;
+        -webkit-border-radius: 0px 67px 0px 78px;
+        -moz-border-radius: 0px 67px 0px 78px;
+        
+        
+
+        li{
+            display: inline;
+
+            a{
+                text-decoration: none;
+                margin: 3px;
+                font-size: 20px;
+                color: variaveis.$corDaFonte;
+
+                i{
+                    &:hover{
+                        color: variaveis.$corHover;
+                    }
+                }
+            }
+        }
+    }
+
+    &__form{
+        padding: 15px;
+        
+        input{
+            display: block;
+            width: 100%;
+            padding: 10px 12px;
+            border: none;
+            font: inherit;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            color: variaveis.$corSecundaria;
+
+            &[type=submit] {
+                background-color: variaveis.$corDoBotao;
+                border: none;
+                padding: 16px 32px;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin: 4px 2px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: variaveis.$corHover;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 780px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 80%;
+
+        img{
+            margin-top: 24px;
+            max-width: 100%;
+        }
+    }
+}
