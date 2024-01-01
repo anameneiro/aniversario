@@ -1,0 +1,2 @@
+AOS.init();const e=new Date("Aug 10, 2024 14:00:00").getTime();setInterval(function(){let t=e-new Date().getTime();document.getElementById("dias").innerHTML=Math.floor(t/864e5),document.getElementById("horas").innerHTML=Math.floor(t%864e5/36e5),document.getElementById("minutos").innerHTML=Math.floor(t%36e5/6e4),document.getElementById("segundos").innerHTML=Math.floor(t%6e4/1e3)},1e3);
+//# sourceMappingURL=index.488fff35.js.map
